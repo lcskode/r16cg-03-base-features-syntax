@@ -12,11 +12,17 @@ class App extends Component {
     ]
   }
 
+  // event handler for Change Names button when clicked
+  changeNamesHandler = () => {
+    // console.log("Change Names button was clicked!");
+  }
+
   render() {
     return (
       <div className="App">
-        <h1>My First React App</h1>   
-        <button>Change Names</button>
+        <h1>My First React App</h1>
+         {/* Added onClick event for buttons */}
+        <button onClick={this.changeNamesHandler}>Change Names</button>
         {/* Accessing state values */}
         <Person name={this.state.persons[0].name} age={this.state.persons[0].age} />
         <Person name={this.state.persons[1].name} age={this.state.persons[1].age} />
