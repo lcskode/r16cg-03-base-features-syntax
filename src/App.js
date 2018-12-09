@@ -3,13 +3,24 @@ import './App.css';
 import Person from './Person/Person';
 
 class App extends Component {
+  // set default state
+  state = {
+    persons: [
+      {name: 'Jack', age: 21},
+      {name: 'Jill', age: 22},
+      {name: 'Rose', age: 23}
+    ]
+  }
+
   render() {
     return (
       <div className="App">
         <h1>My First React App</h1>   
-        <Person name="Jack" age="21" />
-        <Person name="Jill" age="22" />
-        <Person name="Rose" age="23"> 
+        <button>Change Names</button>
+        {/* Accessing state values */}
+        <Person name={this.state.persons[0].name} age={this.state.persons[0].age} />
+        <Person name={this.state.persons[1].name} age={this.state.persons[1].age} />
+        <Person name={this.state.persons[2].name} age={this.state.persons[2].age}> 
           My hobbies: coding and sleeping. 
         </Person>     
       </div>
