@@ -11,7 +11,9 @@ const person = (props) => {
       {/* pass the method changeNamesHandler from App.js by declaring onClick={props.click}*/}
       <p onClick={props.click}>
         I'm {props.name} and I'm {props.age} years old. {props.children}
-        </p>
+      </p>
+      {/* Two way binding by declaring onChange={props.changed} and value={props.name}, ignore error from console for the mean time. */}
+      <input type="text" onChange={props.changed} value={props.name} />
     </div>
   );
 }
