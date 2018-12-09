@@ -7,7 +7,7 @@ const person = (props) => {
   // Used props instead of dynamic content
   // Added props.children to display other elements 
   return (
-    <div>
+    <div className="Person">
       {/* pass the method changeNamesHandler from App.js by declaring onClick={props.click}*/}
       <p onClick={props.click}>
         I'm {props.name} and I'm {props.age} years old. {props.children}
