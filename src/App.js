@@ -38,11 +38,24 @@ class App extends Component {
   }
 
   render() {
+    const style = {
+      backgroundColor: '#eee',
+      font: 'inherit',
+      border: '2px solid blue',
+      padding: '10px',
+      cursor: 'pointer'
+    }
+
     return (
       <div className="App">
         <h1>My First React App</h1>
          {/* Added onClick event for buttons and pass value by using bind */}
-        <button onClick={this.changeNamesHandler.bind(this, 'JACK JACK')}>Change Names</button>
+        <button
+          style={style} 
+          onClick={this.changeNamesHandler.bind(this, 'JACK JACK')}
+        >
+          Change Names
+        </button>
         {/* Accessing state values */}
         <Person 
           name={this.state.persons[0].name} 
