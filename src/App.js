@@ -15,6 +15,14 @@ class App extends Component {
   // event handler for Change Names button when clicked
   changeNamesHandler = () => {
     // console.log("Change Names button was clicked!");
+    // change names when Change Names button is clicked
+    this.setState({
+      persons: [
+        {name: 'JackJack', age: 21},
+        {name: 'JillJill', age: 22},
+        {name: 'RoseRose', age: 23}
+      ]
+    });
   }
 
   render() {
